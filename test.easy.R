@@ -1,4 +1,4 @@
-setwd("~/Documents/R/animint")
+# setwd("~/Documents/R/animint")
 
 library(cdcfluview)
 # retrieve state-level data from the CDC's FluView Portal
