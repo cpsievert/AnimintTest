@@ -1,5 +1,5 @@
 # setwd("~/Documents/R/animint")
-
+devtools::load_all("../gistr")
 library(cdcfluview)
 # retrieve state-level data from the CDC's FluView Portal
 state_flu <- get_state_data(2008:2014)
@@ -101,6 +101,6 @@ ts.line <- ggplot() +
 #             duration = list(WEEKEND = 1000))
 viz <- list(levelHeatmap = level.heatmap, stateMap = state.map, tsLine = ts.line, 
             title = "FluView")
-system.time(animint2dir(viz, out.dir = "FluView"))
-# system.time(animint2gist(viz, out.dir = "FluView"))
+# system.time(animint2dir(viz, out.dir = "FluView"))
+system.time(animint2gist(viz, out.dir = "FluView"))
 # Error: x$headers$`content-type` == "application/json; charset=utf-8" is not TRUE
